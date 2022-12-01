@@ -5,6 +5,7 @@ psql --host=localhost --port=5432 --username=kumar_user --dbname=kumar_db
 
 psql commands
 =============
+```
 select datname from pg_database; == List out the databases with some info about owner and privileges..etc
 \l 						 		 == List out the databases
 \c <database-name>  			 == Connect and switch to your database
@@ -13,7 +14,7 @@ select * from <tablename>;	     == Fetch data from tablename in database
 DROP TABLE <tablename>;          == Delete the table from database
 DROP DATABASE <database-name>;   == Delete the database
 \q                               == Exit from database terminal
-
+```
 
 Create Database
 ---------------
@@ -25,11 +26,13 @@ Switch to Database
 
 Create Table
 ------------
+```
 CREATE TABLE petclinic (
    id SERIAL PRIMARY KEY,
    firstName VARCHAR(255) NOT NULL,
    lastName VARCHAR(255) NOT NULL
 );
+```
 
 Fetch the Database Tables
 -------------------------
