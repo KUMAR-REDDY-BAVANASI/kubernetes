@@ -6,14 +6,14 @@ psql --host=localhost --port=5432 --username=kumar_user --dbname=kumar_db
 psql commands
 =============
 ```
-select datname from pg_database; == List out the databases with some info about owner and privileges..etc
-\l 						 		 == List out the databases
-\c <database-name>  			 == Connect and switch to your database
-\dt                              == List out the tables in database
-select * from <tablename>;	     == Fetch data from tablename in database
-DROP TABLE <tablename>;          == Delete the table from database
-DROP DATABASE <database-name>;   == Delete the database
-\q                               == Exit from database terminal
+select datname from pg_database; ==> List out the databases with some info about owner and privileges..etc
+\l 						 		 ==> List out the databases
+\c <database-name>  			 ==> Connect and switch to your database
+\dt                              ==> List out the tables in database
+select * from <tablename>;	     ==> Fetch data from tablename in database
+DROP TABLE <tablename>;          ==> Delete the table from database
+DROP DATABASE <database-name>;   ==> Delete the database
+\q                               ==> Exit from database terminal
 ```
 
 Create Database

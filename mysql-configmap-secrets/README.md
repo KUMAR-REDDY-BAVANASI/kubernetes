@@ -6,13 +6,13 @@ mysql -u kumar_user -p
 mysql commands
 ===============
 ```
-show databases;                		== List out the databases
-use <database-name>;				== Connect and switch to your database
-show tables;                    	== List out the tables in database
-select * from <tablename>;	     	== Fetch data from tablename in database
-DROP TABLE <tablename>;             == Delete the table from database
-DROP DATABASE <database-name>;   	== Delete the database
-exit								== Exit from database terminal
+show databases;                		==> List out the databases
+use <database-name>;				==> Connect and switch to your database
+show tables;                    	==> List out the tables in database
+select * from <tablename>;	     	==> Fetch data from tablename in database
+DROP TABLE <tablename>;             ==> Delete the table from database
+DROP DATABASE <database-name>;   	==> Delete the database
+exit								==> Exit from database terminal
 ```
 
 reate Database
