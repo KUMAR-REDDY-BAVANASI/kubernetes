@@ -17,11 +17,12 @@ aws iam create-access-key --user-name rbac-user | tee /tmp/create_output.json
 ```
 
 # Export the keys to a file
+```
 cat << EoF > rbacuser_creds.sh
 export AWS_SECRET_ACCESS_KEY=$(jq -r .AccessKey.SecretAccessKey /tmp/create_output.json)
 export AWS_ACCESS_KEY_ID=$(jq -r .AccessKey.AccessKeyId /tmp/create_output.json)
 EoF
-
+```
 
 # Get the configmap and replace userarn
 kubectl get configmap -n kube-system aws-auth -o yaml | grep -v "creationTimestamp\|resourceVersion\|selfLink\|uid" | sed '/^  annotations:/,+2 d' > aws-auth.yaml
