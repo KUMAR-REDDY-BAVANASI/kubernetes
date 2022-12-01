@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysqldb-conf
+data:
+ host: kumar-mysql
+ name: kumar_db
