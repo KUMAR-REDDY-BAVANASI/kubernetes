@@ -1,7 +1,8 @@
+# kubernetes
+
 connect to mysql database
 =========================
 mysql -u kumar_user -p 
-
 
 mysql commands
 ===============

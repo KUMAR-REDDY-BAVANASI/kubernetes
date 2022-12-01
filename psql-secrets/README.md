@@ -1,7 +1,8 @@
+# kubernetes
+
 connect to psql database
 =========================
 psql --host=localhost --port=5432 --username=kumar_user --dbname=kumar_db
-
 
 psql commands
 =============
