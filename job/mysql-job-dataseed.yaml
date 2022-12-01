@@ -1,15 +1,15 @@
 apiVersion: batch/v1   
 kind: Job                    
 metadata:
- name: my-sql-dump
+ name: mysql-dump
 spec:
  ttlSecondsAfterFinished: 10
  template:
    metadata:
-     name: my-sql-dump
+     name: mysql-dump
    spec:
      containers:
-     - name: my-sql-seed
+     - name: mysql-seed
        image: jlsrly/mysql-git                  
        command:
          - 'bash'
