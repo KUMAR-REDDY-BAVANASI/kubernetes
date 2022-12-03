@@ -4,10 +4,10 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::000978986279:role/eksdefaultspotBlueprintsNodeInstanceRole
+      rolearn: arn:aws:iam::<-ACCOUNT-NO->:role/<-EKS-NODE-ROLE->
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::000978986279:user/admin
+    - userarn: arn:aws:iam::<-ACCOUNT-NO->:user/admin
       username: kumar
       groups:
       - kumar-finance
@@ -17,5 +17,5 @@ metadata:
   namespace: kube-system
 data:
   mapUsers: |
-    - userarn: arn:aws:iam::000978986279:user/rbac-user
+    - userarn: arn:aws:iam::<-ACCOUNT-NO->:user/rbac-user
       username: rbac-user
