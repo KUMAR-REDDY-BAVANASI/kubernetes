@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: "XXXXXXXXXXXXX"
+    volumeID: "XXXXXXXXXXXXX" # insert AWS EBS volumeID here
   persistentVolumeReclaimPolicy: Retain
