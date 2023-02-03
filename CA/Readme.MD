@@ -40,6 +40,7 @@ Step 1: Create EKS Additional IAM policy
 -------------------------------------------
 The Cluster Autoscaler requires the following IAM permissions to make calls to AWS APIs on your behalf. Create IAM policy json file:
 
+```
 cat >aws-asg-eks-iam-policy.json<<EOF
 {
     "Version": "2012-10-17",
@@ -60,6 +61,7 @@ cat >aws-asg-eks-iam-policy.json<<EOF
     ]
 }
 EOF
+```
 
 Apply the policy: if you have aws cli and proper permissions
 
