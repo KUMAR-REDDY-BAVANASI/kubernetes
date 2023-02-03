@@ -20,6 +20,7 @@ cd autoscaler/vertical-pod-autoscaler/hack
 
 kubectl get pods -n kube-system -w
 
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
@@ -45,11 +46,13 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", "while true; do timeout 0.5s yes >/dev/null; sleep 0.5s; done"]
 EOF
+```
 
 kubectl get deploy
 
 kubectl describe pod my-auto-deployment
 
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
@@ -63,6 +66,7 @@ spec:
   updatePolicy:
     updateMode: "Auto"
 EOF
+```
 
 kubectl get vpa
 

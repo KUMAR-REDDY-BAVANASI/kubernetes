@@ -10,6 +10,7 @@ kubectl top nodes
 
 kubectl -n kube-system top pods 
 
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
@@ -42,6 +43,7 @@ spec:
           requests:
             cpu: "100m"
 EOF
+```
 
 kubectl get pods
 
@@ -51,6 +53,7 @@ kubectl expose deploy nginx --port 80 --type NodePort
 
 kubectl get all
 
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
@@ -65,6 +68,7 @@ spec:
     name: nginx
   targetCPUUtilizationPercentage: 20
 EOF
+```
 
 [OR]
 

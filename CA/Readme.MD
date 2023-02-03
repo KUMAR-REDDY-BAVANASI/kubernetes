@@ -65,7 +65,9 @@ EOF
 
 Apply the policy: if you have aws cli and proper permissions
 
+```
 aws iam create-policy --policy-name EKS-Node-group-IAM-policy --policy-document file://aws-asg-eks-iam-policy.json
+```
 
 
 Step 2: Attach policy to EKS Node group
@@ -78,10 +80,10 @@ The Cluster Autoscaler requires the following tags on your node Auto Scaling gro
 Navigate to EKS > Clusters > Clustername > Compute
 
 Select Node Group and click Edit
-
+```
 k8s.io/cluster-autoscaler/<cluster-name>  owned
 k8s.io/cluster-autoscaler/enabled         true
-
+```
 Add the Tags at the bottom and save the changes when done.
 
 
